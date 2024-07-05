@@ -9,11 +9,13 @@ Adds support for `image/openraster (.ora)` and `application/x-krita (.kra)` file
 
 This assumes you have installed the [Loupe Image Viewer](https://apps.gnome.org/Loupe/) from [FlatHub](https://flathub.org/apps/org.gnome.Loupe).
 
-If you are using a Gnome 45 desktop environment that comes with Loupe pre-installed. Unfortunately this is not currently working for that environment. Fix is pending.
+For Gnome 45+ environment that comes with Loupe pre-installed, please see the relevant section below. 
 
 > Please note if you uninstall or re-install Loupe Image Viewer, then you will need to copy these files again. 
 
-## Installing from release download
+At the moment all setups require some manual interventions. 
+
+## Installing for FlatPak
 
 Download `glycin_krita_<VERSION>_amd64.zip` from the [releases page](https://github.com/vurentjie/glycin_krita/releases)  and extract the contents.    
 
@@ -38,7 +40,12 @@ https://github.com/vurentjie/glycin_krita/assets/639806/71cb26d7-6414-4104-aba3-
 
 ## Gnome 45 install
 
-Unfortunately the install is only tested and working with the flatpak install at the moment. Fix is pending.
+This is the similar to the previous section ["Installing for FlatPak"](https://github.com/vurentjie/glycin_krita#installing-for-flatpak) except the paths change.
+
+- Download `glycin_krita_<VERSION>_amd64.zip` from the [releases page](https://github.com/vurentjie/glycin_krita/releases)  and extract the contents.    
+- Update the paths in `glycin-krita.conf` to point to `/usr/libexec/..` instead of `/app/libexec/..`
+- Copy `glycin-krita` to: `/usr/libexec/glycin-loaders/1+/glycin-krita`
+- Copy `glycin-krita.conf` to: `/usr/share/glycin-loaders/1+/conf.d/glycin-krita.conf`
 
 ## Building
 
@@ -51,15 +58,19 @@ git clone https://github.com/vurentjie/glycin_krita
 cd glycin_krita
 cargo build --release
 
-#per-user install
+#flatpak per-user install
 LOUPE_INSTALL_PATH=$(flatpak info --user --show-location org.gnome.Loupe)
 [[ -d "${LOUPE_INSTALL_PATH}" ]] && cp ./target/release/glycin-krita ${LOUPE_INSTALL_PATH}/files/libexec/glycin-loaders/1+/glycin-krita
 [[ -d "${LOUPE_INSTALL_PATH}" ]] && cp ./glycin-krita.conf ${LOUPE_INSTALL_PATH}/files/share/glycin-loaders/1+/conf.d/glycin-krita.conf
 
-#system-wide install
+#flatpak system-wide install
 LOUPE_INSTALL_PATH=$(flatpak info --system --show-location org.gnome.Loupe)
 [[ -d "${LOUPE_INSTALL_PATH}" ]] && sudo cp ./target/release/glycin-krita ${LOUPE_INSTALL_PATH}/files/libexec/glycin-loaders/1+/glycin-krita
 [[ -d "${LOUPE_INSTALL_PATH}" ]] && sudo cp ./glycin-krita.conf ${LOUPE_INSTALL_PATH}/files/share/glycin-loaders/1+/conf.d/glycin-krita.conf
+
+#gnome 45 with loupe pre-installed
+sudo cp ./target/release/glycin-krita /usr/libexec/glycin-loaders/1+/glycin-krita
+sudo cp ./glycin-krita.preinstalled.conf /usr/share/glycin-loaders/1+/conf.d/glycin-krita.conf
 
 ```
 
