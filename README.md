@@ -41,7 +41,7 @@ https://github.com/vurentjie/glycin_krita/assets/639806/71cb26d7-6414-4104-aba3-
 This is the same as the previous section ["Installing from release download"](https://github.com/vurentjie/glycin_krita#installing-from-release-download) except the paths change.
 
 - Copy `glycin-krita` to: `/usr/libexec/glycin-loaders/1+/glycin-krita`
-- Copy `glycin-krita.conf` to: `/usr/glycin-loaders/1+/conf.d/glycin-krita.conf`
+- Copy `glycin-krita.conf` to: `/usr/share/glycin-loaders/1+/conf.d/glycin-krita.conf`
 
 
 ## Building
