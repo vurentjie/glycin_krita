@@ -42,7 +42,7 @@ This is the same as the previous section ["Installing from release download"](ht
 
 - Copy `glycin-krita` to: `/usr/libexec/glycin-loaders/1+/glycin-krita`
 - Copy `glycin-krita.conf` to: `/usr/share/glycin-loaders/1+/conf.d/glycin-krita.conf`
-
+- Update the paths in glycin-krita.conf to point to /usr/libexec instead of /app/libexec
 
 ## Building
 
