@@ -7,8 +7,6 @@
 
 Adds support for `image/openraster (.ora)` and `application/x-krita (.kra)` files.
 
-This assumes you have installed the [Loupe Image Viewer](https://apps.gnome.org/Loupe/) from [FlatHub](https://flathub.org/apps/org.gnome.Loupe).
-
 For Gnome 45+ environment that comes with Loupe pre-installed, please see the relevant section below. 
 
 > Please note if you uninstall or re-install Loupe Image Viewer, then you will need to copy these files again. 
@@ -16,6 +14,8 @@ For Gnome 45+ environment that comes with Loupe pre-installed, please see the re
 At the moment all setups require some manual interventions. 
 
 ## Installing for FlatPak
+
+This assumes you have installed the [Loupe Image Viewer](https://apps.gnome.org/Loupe/) from [FlatHub](https://flathub.org/apps/org.gnome.Loupe).
 
 Download `glycin_krita_<VERSION>_amd64.zip` from the [releases page](https://github.com/vurentjie/glycin_krita/releases)  and extract the contents.    
 
