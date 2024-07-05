@@ -40,6 +40,8 @@ https://github.com/vurentjie/glycin_krita/assets/639806/71cb26d7-6414-4104-aba3-
 
 ## Gnome 45 install
 
+This is for environments that come with Loupe pre-installed. 
+
 This is the similar to the previous section ["Installing for FlatPak"](https://github.com/vurentjie/glycin_krita#installing-for-flatpak) except the paths change.
 
 - Download `glycin_krita_<VERSION>_amd64.zip` from the [releases page](https://github.com/vurentjie/glycin_krita/releases)  and extract the contents.    
