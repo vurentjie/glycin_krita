@@ -1,3 +1,6 @@
+> (Note: Gnome's new default image viewer is called [Loupe](https://welcome.gnome.org/app/Loupe/). If you are using the other image viewer called [Eye of Gnome](https://wiki.gnome.org/Apps/EyeOfGnome) you can install loaders for that from the [kra-gdk-pixbuf repository here](https://github.com/vurentjie/kra-gdk-pixbuf).
+
+
 # Krita glycin image loader for Loupe image viewer. 
 
 Adds support for `image/openraster (.ora)` and `application/x-krita (.kra)` files.
@@ -5,6 +8,28 @@ Adds support for `image/openraster (.ora)` and `application/x-krita (.kra)` file
 This assumes you have installed the [Loupe Image Viewer](https://apps.gnome.org/Loupe/) from [FlatHub](https://flathub.org/apps/org.gnome.Loupe).
 
 > Please note if you uninstall or re-install Loupe Image Viewer, then you will need to copy these files again. 
+
+## Installing from release download
+
+Download `glycin_krita_<VERSION>_amd64.zip` from the [releases page](https://github.com/vurentjie/glycin_krita/releases)  and extract the contents.    
+
+There are two files included:
+- **glycin-krita**  (the loader binary)
+- **glycin-krita.conf** (the loader config file)
+
+Copy these to the following locations. 
+
+```
+<loupe_install_location>/files/libexec/glycin-loaders/1+/glycin-krita
+<loupe_install_location>/files/share/glycin-loaders/1+/conf.d/glycin-krita.conf
+```       
+
+`<loupe_install_location>` is the path returned from `flatpak info --show-location org.gnome.Loupe` .
+
+Demo:
+
+https://github.com/vurentjie/glycin_krita/assets/639806/71cb26d7-6414-4104-aba3-3de2cde4ab3d
+
 
 ## Building
 
@@ -29,17 +54,6 @@ LOUPE_INSTALL_PATH=$(flatpak info --system --show-location org.gnome.Loupe)
 
 ```
 
-## Installing from release download
-
-You can also download the loader binary file (glycin-krita) and configuration file (glycin-krita.conf) from the release page. 
-You can then copy them to the desired locations. 
-
-```
-<loupe_install_location>/files/libexec/glycin-loaders/1+/glycin-krita
-<loupe_install_location>/files/share/glycin-loaders/1+/conf.d/glycin-krita.conf
-```
-
-Where `<loupe_install_location>` is the path returned from `flatpak info --show-location org.gnome.Loupe`
 
 ## Additional Notes
 This mostly a stripped down version of the base loader in the 1.0.1 tag of glycin source repository
