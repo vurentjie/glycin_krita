@@ -38,13 +38,7 @@ https://github.com/vurentjie/glycin_krita/assets/639806/71cb26d7-6414-4104-aba3-
 
 ## Gnome 45 install
 
-This is the same as the previous section ["Installing from release download"](https://github.com/vurentjie/glycin_krita#installing-from-release-download) except the paths change.
-
-- Copy `glycin-krita` to: `/usr/libexec/glycin-loaders/1+/glycin-krita`
-- Copy `glycin-krita.conf` to: `/usr/share/glycin-loaders/1+/conf.d/glycin-krita.conf`
-- Update the paths in glycin-krita.conf to point to /usr/libexec instead of /app/libexec
-
-Unfortunately this is a manual process. Will look into rectifying.
+Unfortunately the install is only tested and working with the flatpak install at the moment. Fix is pending.
 
 ## Building
 
