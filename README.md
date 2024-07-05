@@ -1,4 +1,6 @@
-> (Note: Gnome's new default image viewer is called [Loupe](https://welcome.gnome.org/app/Loupe/). If you are using the other image viewer called [Eye of Gnome](https://wiki.gnome.org/Apps/EyeOfGnome) you can install loaders for that from the [kra-gdk-pixbuf repository here](https://github.com/vurentjie/kra-gdk-pixbuf).
+> Note: Gnome's new default image viewer is called [Loupe](https://welcome.gnome.org/app/Loupe/). 
+>
+> If you are using the other image viewer called [Eye of Gnome](https://wiki.gnome.org/Apps/EyeOfGnome) you can install loaders for that from the [kra-gdk-pixbuf repository here](https://github.com/vurentjie/kra-gdk-pixbuf).
 
 
 # Krita glycin image loader for Loupe image viewer. 
