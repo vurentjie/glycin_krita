@@ -26,6 +26,8 @@ Copy these to the following locations.
 
 `<loupe_install_location>` is the path returned from `flatpak info --show-location org.gnome.Loupe` .
 
+You will need to restart Loupe after that.
+
 Demo:
 
 https://github.com/vurentjie/glycin_krita/assets/639806/71cb26d7-6414-4104-aba3-3de2cde4ab3d
