@@ -9,6 +9,8 @@ Adds support for `image/openraster (.ora)` and `application/x-krita (.kra)` file
 
 This assumes you have installed the [Loupe Image Viewer](https://apps.gnome.org/Loupe/) from [FlatHub](https://flathub.org/apps/org.gnome.Loupe).
 
+If you are using a Gnome 45 desktop environment that comes with Loupe pre-installed then install paths will be different. Please check the [Gnome 45 section](https://github.com/vurentjie/glycin_krita#gnome-45-install) below.
+
 > Please note if you uninstall or re-install Loupe Image Viewer, then you will need to copy these files again. 
 
 ## Installing from release download
@@ -33,6 +35,13 @@ You will need to restart Loupe after that.
 Demo:
 
 https://github.com/vurentjie/glycin_krita/assets/639806/71cb26d7-6414-4104-aba3-3de2cde4ab3d
+
+## Gnome 45 install
+
+This is the same as the previous section ["Installing from release download"](https://github.com/vurentjie/glycin_krita#installing-from-release-download) except the paths change.
+
+- Copy `glycin-krita` to: `/usr/libexec/glycin-loaders/1+/glycin-krita`
+- Copy `glycin-krita.conf` to: `/usr/glycin-loaders/1+/conf.d/glycin-krita.conf`
 
 
 ## Building
