@@ -1,0 +1,17 @@
+[package]
+name = "glycin-krita"
+version = "1.0.0"
+authors = ["Gregg Jansen van Vuren"]
+description = "Krita glycin image loader for Loupe image viewer. Adds support for `image/openraster (.ora)` and `application/x-krita (.kra)` files."
+license = "MPL-2.0 OR LGPL-2.1-or-later"
+homepage = "https://github.com/vurentjie/krita_loupe_loader"
+repository = "https://github.com/vurentjie/krita_loupe_loader"
+edition = "2021"
+rust-version = "1.79"
+
+[dependencies]
+zip = "2.1.3"
+image = "0.24.7"
+glycin-utils = { version = "1.0.1", features = ["image-rs"]}
+kamadak-exif = "0.5.5"
+png = "0.17.11"
