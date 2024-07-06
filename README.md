@@ -30,7 +30,10 @@ Copy these to the following locations.
 <loupe_install_location>/files/share/glycin-loaders/1+/conf.d/glycin-krita.conf
 ```       
 
-`<loupe_install_location>` is the path returned from `flatpak info --show-location org.gnome.Loupe` .
+`<loupe_install_location>` is the path returned from:
+```
+flatpak info --show-location org.gnome.Loupe
+``` 
 
 You will need to restart Loupe after that.
 
